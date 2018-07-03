@@ -19,6 +19,7 @@ namespace EventApp.DAL
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
+            //modelBuilder.Entity<Event>().Property(b => b.EventName).IsRequired();
             modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
         }
     }
