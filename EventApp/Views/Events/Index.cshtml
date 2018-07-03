@@ -1,10 +1,10 @@
 ﻿@model IEnumerable<EventApp.Models.Event>
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Events";
 }
 
-<h2>Index</h2>
+<h2>Events</h2>
 
 <p>
     @Html.ActionLink("Create New", "Create")
@@ -23,9 +23,9 @@
         <th>
             @Html.DisplayNameFor(model => model.Guests)
         </th>
-        <th>
+        @*<th>
             @Html.DisplayNameFor(model => model.Description)
-        </th>
+        </th>*@
         <th></th>
     </tr>
 
@@ -43,9 +43,9 @@
         <td>
             @Html.DisplayFor(modelItem => item.Guests)
         </td>
-        <td>
+        @*<td>
             @Html.DisplayFor(modelItem => item.Description)
-        </td>
+        </td>*@
         <td>
             @Html.ActionLink("Edit", "Edit", new { id=item.EventId }) |
             @Html.ActionLink("Details", "Details", new { id=item.EventId }) |
