@@ -5,6 +5,7 @@
  */
 .btn-default,
 .btn-primary,
+.btn-secondary,
 .btn-success,
 .btn-info,
 .btn-warning,
@@ -15,6 +16,7 @@
 }
 .btn-default:active,
 .btn-primary:active,
+.btn-secondary:active,
 .btn-success:active,
 .btn-info:active,
 .btn-warning:active,

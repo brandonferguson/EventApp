@@ -4,13 +4,13 @@
     ViewBag.Title = "Events";
 }
 
-<h2>Events</h2>
+<h2>Your Events</h2>
 
 <p>
-    @Html.ActionLink("Create New", "Create")
+    <button type="button" class="btn btn-dark">@Html.ActionLink("Create New", "Create")</button>
 </p>
 <table class="table">
-    <tr>
+    <tr class="h4">
         <th>
             @Html.DisplayNameFor(model => model.EventName)
         </th>
@@ -32,7 +32,7 @@
 @foreach (var item in Model) {
     <tr>
         <td>
-            @Html.DisplayFor(modelItem => item.EventName)
+            @Html.ActionLink(item.EventName, "Details", new { id = item.EventId })
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.Date)
@@ -47,9 +47,9 @@
             @Html.DisplayFor(modelItem => item.Description)
         </td>*@
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.EventId }) |
-            @Html.ActionLink("Details", "Details", new { id=item.EventId }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.EventId })
+            @Html.ActionLink("Edit", "Edit", new { id = item.EventId }) |
+            @*@Html.ActionLink("Details", "Details", new { id=item.EventId }) |*@
+            @Html.ActionLink("Delete", "Delete", new { id = item.EventId })
         </td>
     </tr>
 }
