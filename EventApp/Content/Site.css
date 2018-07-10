@@ -1,5 +1,4 @@
 ﻿body {
-    padding-top: 50px;
     padding-bottom: 20px;
 }
 
@@ -16,9 +15,31 @@
     white-space: normal;
 }
 
-/* Set width on the form input elements since they're 100% wide by default */
+/* Set width on the form input elements since they're 100% wide by default
 input,
 select,
 textarea {
     max-width: 280px;
+}
+
+*/
+
+a:link {
+    color: #f2f2f2;
+    text-decoration: none;
+}
+
+a:visited {
+    color: #f2f2f2;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #33348e;
+    text-decoration: none;
+}
+
+a:active {
+    color: #7476b4;
+    text-decoration: underline;
 }

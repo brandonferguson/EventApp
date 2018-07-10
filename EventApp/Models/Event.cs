@@ -9,11 +9,12 @@ namespace EventApp.Models
     public class Event
     {
         public int EventId { get; set; }
-        [Required]
+        [Required, MaxLength(100, ErrorMessage ="Limit 100 characters")]
         public string EventName { get; set; }
         public DateTime? Date { get; set; }
         public string Location { get; set; }
         public string Guests { get; set; }
+        [MaxLength(2000, ErrorMessage = "The Description cannot be longer than 2000 characters.")]
         public string Description { get; set; }
     }
 }

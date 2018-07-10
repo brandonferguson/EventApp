@@ -45,6 +45,6 @@
     </dl>
 </div>
 <p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.EventId }) |
-    @Html.ActionLink("Back to List", "Index")
+    <button type="button" class="btn btn-dark">@Html.ActionLink("Edit", "Edit", new { id = Model.EventId })</button>  
+    <button type="button" class="btn btn-dark">@Html.ActionLink("Back to List", "Index")</button>
 </p>

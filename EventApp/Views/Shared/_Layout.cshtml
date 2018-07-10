@@ -4,63 +4,38 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@ViewBag.Title - My Event App</title>
-    @Styles.Render("~/Content/css")
-    @Scripts.Render("~/bundles/modernizr")
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
+    <script src="~/Scripts/modernizr-2.8.3.js"></script>
 
-    @*Editing link styles*@
-    <style type="text/css" media="screen">
-        a:link {
-            color: #f2f2f2;
-            text-decoration: none;
-        }
 
-        a:visited {
-            color: #f2f2f2;
-            text-decoration: none;
-        }
 
-        a:hover {
-            color: #33348e;
-            text-decoration: none;
-        }
-
-        a:active {
-            color: #7476b4;
-            text-decoration: underline;
-        }
-    </style>
 </head>
 <body>
-    <div class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                @Html.ActionLink("Event App", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
-            </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                    <li>@Html.ActionLink("About", "About", "Home")</li>
-                    <li>@Html.ActionLink("Events", "Index", "Events")</li>
-                </ul>
-            </div>
+
+    <div>
+            <ul class="nav navbar-dark bg-dark fixed-top py-4 pl-2">
+                <li class="nav-item px-4 ">@Html.ActionLink("Home", "Index", "Home")</li>
+                <li class="nav-item px-4">@Html.ActionLink("About", "About", "Home")</li>
+                <li class="nav-item px-4">@Html.ActionLink("Events", "Index", "Events")</li>
+            </ul>
         </div>
-    </div>
+
+
     <div style="background-color:#007399; color:#f2f2f2;">
         <div class="container body-content">
             @RenderBody()
-            <hr />
+
             <footer>
                 <p>&copy; @DateTime.Now.Year - My Event App</p>
             </footer>
         </div>
     </div>
-    @Scripts.Render("~/bundles/jquery")
-        @Scripts.Render("~/bundles/bootstrap")
-    @RenderSection("scripts", required: false)
+
+    <script src="~/Scripts/jquery-3.3.1.min.js"></script>
+    <script src="~/Scripts/jquery.validate.min.js"></script>
+    <script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+
 </body>
 </html>
