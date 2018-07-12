@@ -5,16 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@ViewBag.Title - My Event App</title>
     <link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
-    <link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/site.css" rel="stylesheet" type="text/css" />
     <script src="~/Scripts/modernizr-2.8.3.js"></script>
 
 
 
 </head>
 <body>
-
-    <div>
-            <ul class="nav navbar-dark bg-dark fixed-top py-4 pl-2">
+        <div>
+            <ul class="nav navbar-dark bg-dark fixed-top pl-2">
                 <li class="nav-item px-4 ">@Html.ActionLink("Home", "Index", "Home")</li>
                 <li class="nav-item px-4">@Html.ActionLink("About", "About", "Home")</li>
                 <li class="nav-item px-4">@Html.ActionLink("Events", "Index", "Events")</li>
@@ -22,13 +21,14 @@
         </div>
 
 
-    <div style="background-color:#007399; color:#f2f2f2;">
-        <div class="container body-content">
-            @RenderBody()
+        <div style="background-color:#007399; color:#f2f2f2;">
+            <div class="container body-content">
+                @RenderBody()
 
-            <footer>
-                <p>&copy; @DateTime.Now.Year - My Event App</p>
-            </footer>
+                <footer>
+                        <p>&copy; @DateTime.Now.Year - My Event App</p>
+                </footer>
+            </div>
         </div>
     </div>
 

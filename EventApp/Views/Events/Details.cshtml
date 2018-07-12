@@ -45,6 +45,7 @@
     </dl>
 </div>
 <p>
-    <button type="button" class="btn btn-dark">@Html.ActionLink("Edit", "Edit", new { id = Model.EventId })</button>  
-    <button type="button" class="btn btn-dark">@Html.ActionLink("Back to List", "Index")</button>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.EventId }, new { @class = "btn btn-dark" })
+    @Html.ActionLink("Delete", "Delete", new { id = Model.EventId }, new { @class = "btn btn-dark d-sm-none" })
+    @Html.ActionLink("Back to List", "Index", null, null, new { @class = "btn btn-dark" })
 </p>

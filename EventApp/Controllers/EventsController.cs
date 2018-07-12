@@ -16,8 +16,21 @@ namespace EventApp.Controllers
         private EventContext db = new EventContext();
 
         // GET: Events
-        public ActionResult Index()
+        public ActionResult Index(string sortOrder)
         {
+            ViewBag.DateSortParm = sortOrder == "Date" ? "date_desc" : "Date";
+            var events = from e in db.Events
+                         select e;
+
+            switch (sortOrder)
+            {
+                case "Date":
+                    events = events.OrderByDescending(s => s.Date);
+                    break;
+                case "date_desc":
+                    events = events.OrderByDescending(s => s.Date);
+                    break;
+            }
             return View(db.Events.ToList());
         }
 

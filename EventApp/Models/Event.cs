@@ -9,7 +9,7 @@ namespace EventApp.Models
     public class Event
     {
         public int EventId { get; set; }
-        [Required, MaxLength(100, ErrorMessage ="Limit 100 characters")]
+        [Required, MaxLength(50, ErrorMessage ="Limit 50 characters")]
         public string EventName { get; set; }
         public DateTime? Date { get; set; }
         public string Location { get; set; }

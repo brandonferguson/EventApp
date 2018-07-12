@@ -53,12 +53,15 @@
 
     </dl>
 
-    @using (Html.BeginForm()) {
+    @using (Html.BeginForm())
+    {
         @Html.AntiForgeryToken()
 
-        <div class="form-actions no-color">
-            <input type="submit" value="Delete" class="btn btn-dark" /> |
-            @Html.ActionLink("Back to List", "Index")
-        </div>
+    <div class="form-actions no-color">
+        <input type="submit" value="Delete" class="btn btn-dark" />
+        @Html.ActionLink("Back to List", "Index", null, new { @class = "btn btn-dark" })
+
+    </div>
+
     }
 </div>

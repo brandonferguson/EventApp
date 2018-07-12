@@ -7,46 +7,55 @@
 <h2>Your Events</h2>
 
 <p>
-    <button type="button" class="btn btn-dark">@Html.ActionLink("Create New", "Create")</button>
-</p>
-<table class="table">
-    <tr class="h4">
-        <th>
-            @Html.DisplayNameFor(model => model.EventName)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Date)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Location)
-        </th>
-        <th class="d-none d-md-table-cell"> @*hides the Guest column on medium and lower viewpoints*@
-            @Html.DisplayNameFor(model => model.Guests)
-        </th>
-        
-        <th class="d-none d-sm-table-cell">Actions</th> @*hides the Action column on small and lower viewpoints*@
+    @*<button type="button" class="btn btn-dark">*@
 
-    </tr>
+        @Html.ActionLink("Create New", "Create", null, null, new {@class = "btn btn-dark"} )
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.ActionLink(item.EventName, "Details", new { id = item.EventId })
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Date)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Location)
-        </td>
-        <td class="d-none d-md-table-cell">  @*hides the Guest column on medium and lower viewpoints*@
-            @Html.DisplayFor(modelItem => item.Guests)
-        </td>
-        <td class="d-none d-sm-table-cell">  @*hides the Action column on medium and lower viewpoints*@   
-            @Html.ActionLink("Edit", "Edit", new { id = item.EventId }) |
-            @Html.ActionLink("Delete", "Delete", new { id = item.EventId })
-        </td>  
-    </tr>
-}
+    @*</button>*@
+<p>
 
-</table>
+    <table class="table">
+        <tr class="h4">
+            <th>
+                @Html.DisplayNameFor(model => model.EventName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Date)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Location)
+            </th>
+            <th class="d-none d-md-table-cell">
+                @*hides the Guest column on medium and lower viewpoints*@
+                @Html.DisplayNameFor(model => model.Guests)
+            </th>
+
+            <th class="d-none d-sm-table-cell">Actions</th> @*hides the Action column on small and lower viewpoints*@
+
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.ActionLink(item.EventName, "Details", new { id = item.EventId })
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Date)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Location)
+                </td>
+                <td class="d-none d-md-table-cell">
+                    @*hides the Guest column on medium and lower viewpoints*@
+                    @Html.DisplayFor(modelItem => item.Guests)
+                </td>
+                <td class="d-none d-sm-table-cell">
+                    @*hides the Action column on medium and lower viewpoints*@
+                    @Html.ActionLink("Edit", "Edit", new { id = item.EventId }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.EventId })
+                </td>
+            </tr>
+        }
+
+    </table>
