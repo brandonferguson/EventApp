@@ -18,20 +18,31 @@ namespace EventApp.Controllers
         // GET: Events
         public ActionResult Index(string sortOrder)
         {
+            //Sorts default by date, allows clicking of table header to short
+            ViewBag.NameSortParm = String.IsNullOrEmpty(sortOrder) ? "name_desc" : "";
             ViewBag.DateSortParm = sortOrder == "Date" ? "date_desc" : "Date";
             var events = from e in db.Events
                          select e;
 
             switch (sortOrder)
             {
+                case "name_desc":
+                    events = events.OrderByDescending(e => e.EventName);
+                    break;
+                case "Name":
+                    events = events.OrderBy(e => e.EventName);
+                    break;
                 case "Date":
-                    events = events.OrderByDescending(s => s.Date);
+                    events = events.OrderBy(e => e.Date);
                     break;
                 case "date_desc":
-                    events = events.OrderByDescending(s => s.Date);
+                    events = events.OrderByDescending(e => e.Date);
+                    break;
+                default:
+                    events = events.OrderBy(e => e.Date);
                     break;
             }
-            return View(db.Events.ToList());
+            return View(events.ToList());
         }
 
         // GET: Events/Details/5
