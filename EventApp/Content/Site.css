@@ -3,8 +3,30 @@
     padding: 1.3em;
 }
 body {
-    padding-bottom: 20px;
     margin-top: 4em;
+}
+
+
+footer p {
+    margin-left: 4%;
+    margin-bottom: -16px;
+}
+
+footer {
+    padding-top: 1em;
+}
+
+.text-shadow {
+    text-shadow: 3px 3px 5px #0b2747;
+}
+
+th {
+    background-color: #0C4D69;
+    text-shadow: 3px 3px 5px #0b2747;
+}
+
+table {
+    border: 1px solid white;
 }
 
 /* Set padding to keep content from hitting the edges */
@@ -14,21 +36,18 @@ body {
     padding-right: 15px;
 }
 
+.display-format {
+    background-color: #0C4D69;
+    border-radius: 7px;
+    box-shadow: 5px 5px 5px #0b2747;
+}
+
 /* Override the default bootstrap behavior where horizontal description lists 
    will truncate terms that are too long to fit in the left column 
 */
 .dl-horizontal dt {
     white-space: normal;
 }
-
-/* Set width on the form input elements since they're 100% wide by default
-input,
-select,
-textarea {
-    max-width: 280px;
-}
-
-*/
 
 a:link {
     color: #f2f2f2;
@@ -41,7 +60,7 @@ a:visited {
 }
 
 a:hover {
-    color: #33348e;
+    color: #879294;
     text-decoration: none;
 }
 

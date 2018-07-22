@@ -1,0 +1,50 @@
+﻿
+@{
+    ViewBag.Title = "About";
+}
+
+<h2 class="text-shadow">@ViewBag.Message</h2>
+
+<p>If you're reading this, then you had no problem getting the project loaded and going, so that's a plus.</p>
+
+<p>
+    You should be able to create new records by hitting the "Create" button on the main page. This will allow you to enter in the details regarding your event. Please note that the Event Name and Description fields are limited to 50 and 2000 characters, respectively.
+</p>
+<p>
+    Once created, you'll be able to edit the event by clicking either the Edit link on the main page, or from the event details page.
+</p>
+<p>
+    To review the details of your event, click the event name. This will provide you all the information currently entered, with the option to edit if needed.
+</p>
+<p>
+    To delete your event, select the Delete link from the main page. You will be given an option to delete your event or return back to the main page.
+</p>
+<p>
+    Different screensizes will have slightly variable views. As the main page's size decreases, first the guest list drops, and then the edit/delete options. To edit or delete your event in smaller screens, you will need to go the event details page and update directly from there. In smaller screen formats, the Delete option will be visible in the event details section.
+</p>    
+
+<h3 class="text-shadow">Things that need to be done</h3>
+<ul>
+    <li>
+        Refactor views to take advantage of partial views.
+    </li>
+    <li>
+        Add a date/time picker to the Date field in Create/Edit views.
+    </li>
+    <li>
+        Populate a "TBD" message for dates that are left blank
+    </li>
+</ul>
+
+<h3 class="text-shadow">Things that I want to do that are outside my current abilities</h3>
+<ul>
+    <li>
+        Log-in and user authentication
+    </li>
+    <li>
+        Map integration with address for events
+    </li>
+    <li>
+        Email invites to invitees/users
+    </li>
+</ul>

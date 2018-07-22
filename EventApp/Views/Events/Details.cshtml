@@ -4,45 +4,54 @@
     ViewBag.Title = "Details";
 }
 
-<h2>@Html.DisplayFor(model => model.EventName)</h2>
+<h2 class="text-shadow">@Html.DisplayFor(model => model.EventName)</h2>
 
 <div>
-    <h4>Event</h4>
+    @*<h4 class="text-shadow">Event</h4>*@
     <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.Date)
-        </dt>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="form-group">
+                @Html.LabelFor(model => model.EventName, htmlAttributes: new { @class = "control-label col-md-2 text-shadow" })
+                <div class="col-md-10 display-format">
+                    @Html.DisplayFor(model => model.EventName)
+                </div>
+            </div>
 
-        <dd>
-            @Html.DisplayFor(model => model.Date)
-        </dd>
+            <div class="form-group">
+                @Html.LabelFor(model => model.Date, htmlAttributes: new { @class = "control-label col-md-2 text-shadow" })
+                <div class="col-md-10 display-format">
+                    @Html.DisplayFor(model => model.Date)
+                </div>
+            </div>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Location)
-        </dt>
+            <div class="form-group">
+                @Html.LabelFor(model => model.Location, htmlAttributes: new { @class = "control-label col-md-2 text-shadow" })
+                <div class="col-md-10 display-format">
+                    @Html.DisplayFor(model => model.Location)
+                </div>
+            </div>
 
-        <dd>
-            @Html.DisplayFor(model => model.Location)
-        </dd>
+            <div class="form-group">
+                @Html.LabelFor(model => model.Guests, htmlAttributes: new { @class = "control-label col-md-2 text-shadow" })
+                <div class="col-md-10 display-format" >
+                    @Html.DisplayFor(model => model.Guests)
+                </div>
+            </div>
+        </div>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Guests)
-        </dt>
+        <div class="col-md-6">
+            <div class="form-group">
+                @Html.LabelFor(model => model.Description, htmlAttributes: new { @class = "control-label col-md-2 text-shadow" })
+                <div class="col-md-10 display-format">
+                    @Html.DisplayFor(model => model.Description)
 
-        <dd>
-            @Html.DisplayFor(model => model.Guests)
-        </dd>
+                </div>
+            </div>
+        </div>
+    </div>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Description)
-        </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.Description)
-        </dd>
-
-    </dl>
 </div>
 <p>
     @Html.ActionLink("Edit", "Edit", new { id = Model.EventId }, new { @class = "btn btn-dark" })

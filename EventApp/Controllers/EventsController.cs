@@ -21,6 +21,7 @@ namespace EventApp.Controllers
             //Sorts default by date, allows clicking of table header to short
             ViewBag.NameSortParm = String.IsNullOrEmpty(sortOrder) ? "name_desc" : "";
             ViewBag.DateSortParm = sortOrder == "Date" ? "date_desc" : "Date";
+            ViewBag.NameSortParm = sortOrder == "Name" ? "name_desc" : "Name";
             var events = from e in db.Events
                          select e;
 
@@ -138,6 +139,12 @@ namespace EventApp.Controllers
             db.Events.Remove(@event);
             db.SaveChanges();
             return RedirectToAction("Index");
+        }
+
+        public ActionResult About()
+        {
+            ViewBag.Message = "EventApp's About Page";
+            return View();
         }
 
         protected override void Dispose(bool disposing)
