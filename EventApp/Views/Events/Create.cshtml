@@ -7,71 +7,69 @@
 <h2 class="text-shadow">Create New Event</h2>
 
 
-@using (Html.BeginForm()) 
+@using (Html.BeginForm())
 {
     @Html.AntiForgeryToken()
-    
-<div class="form-horizontal">
-    <hr />
-    @Html.ValidationSummary(true, "", new { @class = "text-basic" })
 
-    <div class="row">
-        <div class="col-md-6">
-            <div class="form-group">
-                @Html.LabelFor(model => model.EventName, htmlAttributes: new { @class = "control-label col-md-2 text-shadow" })
-                <div class="col-md-10">
-                    @Html.EditorFor(model => model.EventName, new { htmlAttributes = new { @class = "form-control" } })
-                    @Html.ValidationMessageFor(model => model.EventName, "", new { @class = "text-basic" })
+    <div class="form-horizontal">
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-basic" })
+
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    @Html.LabelFor(model => model.EventName, htmlAttributes: new { @class = "control-label col-md-2 text-shadow" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.EventName, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.EventName, "", new { @class = "text-basic" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Date, htmlAttributes: new { @class = "control-label col-md-2 text-shadow" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.Date, new { htmlAttributes = new { @class = "form-control datepicker" } })
+                        @Html.ValidationMessageFor(model => model.Date, "", new { @class = "text-basic" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Location, htmlAttributes: new { @class = "control-label col-md-2 text-shadow" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.Location, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.Location, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Guests, htmlAttributes: new { @class = "control-label col-md-2 text-shadow" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.Guests, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.Guests, "", new { @class = "text-danger" })
+                    </div>
                 </div>
             </div>
-
-            <div class="form-group">
-                @Html.LabelFor(model => model.Date, htmlAttributes: new { @class = "control-label col-md-2 text-shadow" })
-                <div class="col-md-10">
-                    @Html.EditorFor(model => model.Date, new { htmlAttributes = new { @class = "form-control" } })
-                    @Html.ValidationMessageFor(model => model.Date, "", new { @class = "text-basic" })
-                </div>
-            </div>
-
-            <div class="form-group">
-                @Html.LabelFor(model => model.Location, htmlAttributes: new { @class = "control-label col-md-2 text-shadow" })
-                <div class="col-md-10">
-                    @Html.EditorFor(model => model.Location, new { htmlAttributes = new { @class = "form-control" } })
-                    @Html.ValidationMessageFor(model => model.Location, "", new { @class = "text-danger" })
-                </div>
-            </div>
-
-            <div class="form-group">
-                @Html.LabelFor(model => model.Guests, htmlAttributes: new { @class = "control-label col-md-2 text-shadow" })
-                <div class="col-md-10">
-                    @Html.EditorFor(model => model.Guests, new { htmlAttributes = new { @class = "form-control" } })
-                    @Html.ValidationMessageFor(model => model.Guests, "", new { @class = "text-danger" })
+            <div class="col-md-6">
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Description, htmlAttributes: new { @class = "control-label col-md-2 text-shadow" })
+                    <div class="col-md-10">
+                        @Html.TextAreaFor(model => model.Description, 11, 1, new { @class = "form-control" })
+                        @Html.ValidationMessageFor(model => model.Description, "", new { @class = "text-danger" })
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="col-md-6">
-            <div class="form-group">
-                @Html.LabelFor(model => model.Description, htmlAttributes: new { @class = "control-label col-md-2 text-shadow" })
-                <div class="col-md-10">
-                    @Html.TextAreaFor(model => model.Description, 11, 1, new { @class = "form-control" })
-                    @Html.ValidationMessageFor(model => model.Description, "", new { @class = "text-danger" })
-                </div>
+
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Create" class="btn btn-dark" />
+                @Html.ActionLink("Back to List", "Index", null, new { @class = "btn btn-dark" })
             </div>
         </div>
     </div>
+}
+
+<script src="~/Scripts/jquery.validate.js"></script>
 
 
-    <div class="form-group">
-        <div class="col-md-offset-2 col-md-10">
-            <input type="submit" value="Create" class="btn btn-dark" />
-            @Html.ActionLink("Back to List", "Index", null, new { @class = "btn btn-dark" })
-        </div>
-    </div>
-</div>
-    }
-
-    <script src="~/Scripts/jquery.validate.js"></script>
-
-    @*@section Scripts {
-            @Scripts.Render("~/bundles/jqueryval")
-        }*@
