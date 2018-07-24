@@ -20,7 +20,7 @@ namespace EventApp.DAL
                     Guests="Joe, Michael, Wes, Rose"},
                 new Event{EventName="Josh's Birthday Dinner",
                     Date =DateTime.Parse("2018-02-07"),
-                    Location ="1725 Priarie Circle",
+                    Location ="1725 Prairie Circle",
                     Description ="Josh is older and needs to eat food to celebrate.  Join us he celebrates another year of not dying.  Burgers and snacks will be provided.  No kids.  You should bring lots of booze.",
                     Guests ="Josh, Dunca, Joe, Michael, Wes, Rose"},
                 new Event{EventName="Boardgame Day",
