@@ -5,12 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@ViewBag.Title - My Event App</title>
     <link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="~/Content/bootstrap-datetimepicker.min.css">
+    @* Start stylesheets for Datetimepicker *@
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="~/Content/bootstrap-datetimepicker.min.css">
+    @* end stylesheets for Datetimepicker *@
     <link href="~/Content/site.css" rel="stylesheet" type="text/css" />
-
-
-
     <script src="~/Scripts/modernizr-2.8.3.js"></script>
 </head>
 
@@ -40,9 +39,11 @@
     <script src="~/Scripts/jquery.validate.min.js"></script>
     <script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
     <script src="~/Scripts/bootstrap.min.js"></script>
+    @* Script links for Datetimepicker scripts *@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.21.0/moment.min.js" type="text/javascript"></script>
     <script src="~/Scripts/bootstrap-datetimepicker.min.js"></script>
+   @* Script for Datetimepicker function *@
     <script>
         $(function () {
             $('input.datepicker').datetimepicker();

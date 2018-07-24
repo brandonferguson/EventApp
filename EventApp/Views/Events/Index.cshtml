@@ -49,7 +49,7 @@
                     @Html.DisplayFor(modelItem => item.Guests)
                 </td>
                 <td class="d-none d-sm-table-cell">
-                    @*hides the Action column on medium and lower viewpoints*@
+                    @*hides the Action column on small and lower viewpoints*@
                     @Html.ActionLink("Edit", "Edit", new { id = item.EventId }) |
                     @Html.ActionLink("Delete", "Delete", new { id = item.EventId })
                 </td>

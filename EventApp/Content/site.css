@@ -1,0 +1,74 @@
+﻿
+.nav {
+    padding: 1.3em;
+}
+body {
+    margin-top: 4em;
+    height:100%;
+}
+
+footer p {
+    margin-left: 4%;
+    margin-bottom: -16px;
+}
+
+footer {
+    padding-top: 1em;
+    width: 100%;
+}
+
+.text-shadow {
+    text-shadow: 3px 3px 5px #0b2747;
+}
+
+/*Formats the main table header separately from the th element that is shared with Datetimepicker*/
+.header-format {
+    background-color: #0C4D69;
+    text-shadow: 3px 3px 5px #0b2747;
+}
+
+
+table {
+    border: 1px solid white;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-top: .5%; 
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.display-format {
+    background-color: #0C4D69;
+    border-radius: 7px;
+    box-shadow: 5px 5px 5px #0b2747;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Link formats */
+a:link {
+    color: #f2f2f2;
+    text-decoration: none;
+}
+
+a:visited {
+    color: #f2f2f2;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #879294;
+    text-decoration: none;
+}
+
+a:active {
+    color: #7476b4;
+    text-decoration: underline;
+}

@@ -39,7 +39,7 @@
                     @Html.LabelFor(model => model.Location, htmlAttributes: new { @class = "control-label col-md-2 text-shadow" })
                     <div class="col-md-10">
                         @Html.EditorFor(model => model.Location, new { htmlAttributes = new { @class = "form-control" } })
-                        @Html.ValidationMessageFor(model => model.Location, "", new { @class = "text-danger" })
+                        @Html.ValidationMessageFor(model => model.Location, "", new { @class = "text-basic" })
                     </div>
                 </div>
 
@@ -47,7 +47,7 @@
                     @Html.LabelFor(model => model.Guests, htmlAttributes: new { @class = "control-label col-md-2 text-shadow" })
                     <div class="col-md-10">
                         @Html.EditorFor(model => model.Guests, new { htmlAttributes = new { @class = "form-control" } })
-                        @Html.ValidationMessageFor(model => model.Guests, "", new { @class = "text-danger" })
+                        @Html.ValidationMessageFor(model => model.Guests, "", new { @class = "text-basic" })
                     </div>
                 </div>
             </div>

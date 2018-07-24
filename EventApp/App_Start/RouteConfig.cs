@@ -16,6 +16,7 @@ namespace EventApp
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
+                //sets default view to Events/Index
                 defaults: new { controller = "Events", action = "Index", id = UrlParameter.Optional }
             );
         }
